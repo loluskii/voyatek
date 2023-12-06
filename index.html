@@ -125,6 +125,21 @@
     .bg-primary-light {
       background-color: #3d8bfd;
     }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .9);
+      color: white;
+      text-align: center;
+      padding-top: 20%;
+      font-size: 24px;
+      z-index: 1000;
+    }
   </style>
 </head>
 
@@ -740,9 +755,26 @@
       </div>
     </div>
   </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
+  <div id="overlay">
+    <p>This site is no longer in desktop mode. Please open on a desktop device</p>
+  </div>
+  <script>
+    // Function to show or hide the overlay based on window width
+    function checkWindowSize() {
+      var overlay = document.getElementById('overlay');
+      if (window.innerWidth < 768) { // Adjust the threshold according to your needs
+        overlay.style.display = 'block';
+      } else {
+        overlay.style.display = 'none';
+      }
+    }
+
+    // Initial check when the page loads
+    checkWindowSize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', checkWindowSize);
+  </script>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
