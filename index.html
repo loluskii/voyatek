@@ -133,9 +133,14 @@
     <!-- place navbar here -->
   </header>
   <main class="container">
-    <nav class="navbar navbar-expand-sm navbar-light bg-white">
+    <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom">
       <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">
+          <img src="./go.png" style="height: 30px" alt="" srcset="">
+        </a>
+        <form class="d-flex my-2 my-lg-0">
+          <input class="form-control me-sm-2" type="text" placeholder="Search">
+        </form>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -144,23 +149,26 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link active d-flex flex-column text-center" href="#" aria-current="page"><i class="bi bi-house-door-fill"></i>Home <span
-                  class="visually-hidden">(current)</span></a>
+              <a class="nav-link active d-flex flex-column text-center" href="#" aria-current="page"><i
+                  class="bi bi-house-door-fill"></i>Home <span class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex flex-column text-center" href="#"><i class="bi bi-wallet"></i> Wallet</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex flex-column text-center" href="#"><i class="bi bi-lightning-charge-fill"></i> Trends</a>
+              <a class="nav-link d-flex flex-column text-center" href="#"><i class="bi bi-lightning-charge-fill"></i>
+                Trends</a>
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex flex-column text-center" href="#"><i class="bi bi-globe"></i> GoEasy</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex flex-column text-center" href="#"><i class="bi bi-pie-chart-fill"></i> GoCredit</a>
+              <a class="nav-link d-flex flex-column text-center" href="#"><i class="bi bi-pie-chart-fill"></i>
+                GoCredit</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex flex-column text-center" href="#"><i class="bi bi-hand-thumbs-up"></i> Commission for Life</a>
+              <a class="nav-link d-flex flex-column text-center" href="#"><i class="bi bi-hand-thumbs-up"></i>
+                Commission for Life</a>
             </li>
 
           </ul>
@@ -181,16 +189,16 @@
         </div>
       </div>
     </nav>
-    <h1 class="text-center">
+    <h1 class="text-center mt-5">
       My Trip <i class="text-primary">Planner</i>
     </h1>
     <div class="container">
       <div class="d-flex justify-content-between">
         <div class="btn bg-light px-4 py-2">My Vacation Plan - Spring</div>
         <div class="dropdown">
-          <button class="btn bg-primary-light dropdown-toggle" type="button" id="dropdownMenuButton1"
+          <button class="btn bg-primary-light dropdown-toggle text-white" type="button" id="dropdownMenuButton1"
             data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown button
+            <i class="bi bi-download text-white"></i> Save
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" href="#"><img src="pie-chart-xxl_95915 13.png" alt="" srcset=""> Dashboard</a>
@@ -211,7 +219,7 @@
     <div class=" row">
       <div class="col-md-10 mx-auto">
         <section class="box box-container p-4 my-5">
-          <ul class="nav nav-tabs justify-content-center mb-3" id="myTab" role="tablist">
+          <ul class="nav nav-tabs justify-content-center mb-3 border-bottom-0" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
                 role="tab" aria-controls="home" aria-selected="true">One Way</button>
@@ -284,7 +292,35 @@
                 </form>
               </div>
             </div>
-            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab"> messages </div>
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+              <form action="">
+                <div class="input-fields d-flex mb-3">
+                  <div class="form-floating mb-3 w-100">
+                    <input type="email" class="form-control w-100" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">From</label>
+                  </div>
+                  <div class="form-floating mb-3 w-100">
+                    <input type="email" class="form-control w-100" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">To</label>
+                  </div>
+                  <div class="form-floating mb-3 w-100">
+                    <input type="email" class="form-control w-100" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Depart</label>
+                  </div>
+                  <div class="form-floating mb-3 w-100">
+                    <input type="email" class="form-control w-100" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Return</label>
+                  </div>
+                  <div class="form-floating mb-3 w-100">
+                    <input type="email" class="form-control w-100" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Travellers</label>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button class="btn px-5 btn-primary">Save Details</button>
+                </div>
+              </form>
+            </div>
           </div>
         </section>
         <h3 class="text-center">Trip Itenary</h3>
@@ -294,7 +330,9 @@
             <div class="card-body">
               <div class="d-flex align-items-center justify-content-">
                 <div class="logo-container" style="width: 15%">
-                  <div class="logo-box bg-light" style="height: 100px; width: 100px;"></div>
+                  <div class="logo-box bg-light" style="height: 100px; width: 100px;">
+                    <img src="./azeer.png" style="height: 100px; width: 100px;" alt="">
+                  </div>
                 </div>
                 <div class="flights align-items-center" style="width: 70%; position: relative">
                   <div class="top d-flex justify-content-between text-center">
@@ -344,7 +382,9 @@
             <div class="card-body">
               <div class="d-flex align-items-center justify-content-">
                 <div class="logo-container" style="width: 15%">
-                  <div class="logo-box bg-light" style="height: 100px; width: 100px;"></div>
+                  <div class="logo-box bg-light" style="height: 100px; width: 100px;">
+                    <img src="./azeer.png" style="height: 100px; width: 100px;" alt="">
+                  </div>
                 </div>
                 <div class="flights align-items-center" style="width: 70%; position: relative">
                   <div class="top d-flex justify-content-between text-center">
@@ -390,6 +430,15 @@
               </div>
             </div>
           </div>
+          <div class="add-hotel mx-auto shadow-sm">
+            <div class="container">
+              <div class="content d-flex flex-column text-center align-items-center">
+                <i class="bi bi-plus-circle-fill text-muted"></i>
+                <h5 class="text-muted">Add Flight</h5>
+              </div>
+            </div>
+          </div>
+
 
         </section>
         <hr>
@@ -399,7 +448,9 @@
             <div class="card-body">
               <div class="d-flex align-items-center justify-content-">
                 <div class="logo-container" style="width: 10%">
-                  <div class="logo-box bg-light" style="height: 100px; width: 100px;"></div>
+                  <div class="logo-box bg-light" style="height: 100px; width: 100px;">
+                    <img src="./hotel-logo.png" style="height: 100px; width: 100px;" alt="">
+                  </div>
                 </div>
                 <div class="hotel-name text-center" style="width: 20%">
                   <h6 class="text-uppercase">Day 1</h6>
@@ -449,7 +500,9 @@
             <div class="card-body">
               <div class="d-flex align-items-center justify-content-">
                 <div class="logo-container d-flex align-items-center" style="width: 20%">
-                  <div class="logo-box bg-light me-3" style="height: 70px; width: 70px;"></div>
+                  <div class="logo-box bg-light me-3" style="height: 70px; width: 70px;">
+                    <img src="./imag228.png" style="height: 70px; width: 70px;" alt="">
+                  </div>
                   <div class="hotel-name text-center">
                     <h6 class="text-">Day 1</h6>
                     <p class="mb-0">Dubai, UAE</p>
@@ -492,7 +545,9 @@
             <div class="card-body">
               <div class="d-flex align-items-center justify-content-">
                 <div class="logo-container d-flex align-items-center" style="width: 20%">
-                  <div class="logo-box bg-light me-3" style="height: 70px; width: 70px;"></div>
+                  <div class="logo-box bg-light me-3" style="height: 70px; width: 70px;">
+                    <img src="./imag228.png" style="height: 70px; width: 70px;" alt="">
+                  </div>
                   <div class="hotel-name text-center">
                     <h6 class="text-">Day 2</h6>
                     <p class="mb-0">Dubai, UAE</p>
@@ -535,95 +590,11 @@
             <div class="card-body">
               <div class="d-flex align-items-center justify-content-">
                 <div class="logo-container d-flex align-items-center" style="width: 20%">
-                  <div class="logo-box bg-light me-3" style="height: 70px; width: 70px;"></div>
+                  <div class="logo-box bg-light me-3" style="height: 70px; width: 70px;">
+                    <img src="./imag228.png" style="height: 70px; width: 70px;" alt="">
+                  </div>
                   <div class="hotel-name text-center">
                     <h6 class="">Day 3</h6>
-                    <p class="mb-0">Dubai, UAE</p>
-                  </div>
-                </div>
-                <div class="context text-center small me-3" style="width: 25%">
-                  <p class="mb-0">Lake Louise & Banff & Moraine
-                    Lake Tour from Calgary or Banff</p>
-                </div>
-                <div class="activities d-flex justify-content-between align-items-center"
-                  style="width: 25%; position: relative">
-                  <div class="d-flex flex-column text-center">
-                    <span class="text-dark">11:00</span>
-                    <span class="text-muted">AM</span>
-                  </div>
-                  <div class="start">
-                    <div class="d-flex flex-column text-center">
-                      <span class="text-dark">Check In</span>
-                      <span class="text-muted">30th, Sept. 2023</span>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-column text-center">
-                    <span class="text-dark">15:00</span>
-                    <span class="text-muted">PM</span>
-                  </div>
-                </div>
-                <div class="price-button d-flex justify-content-end" style="width: 25%">
-                  <div class="d-flex align-items-top">
-                    <h5 class="me-3 mb-0">N34,234</h5>
-                    <div class="text-center">
-                      <button class="btn btn-primary">Change</button>
-                      <p class="small mb-0">Flight Details</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card hotel-card border-0 shadow mb-4">
-            <div class="card-body">
-              <div class="d-flex align-items-center justify-content-">
-                <div class="logo-container d-flex align-items-center" style="width: 20%">
-                  <div class="logo-box bg-light me-3" style="height: 70px; width: 70px;"></div>
-                  <div class="hotel-name text-center">
-                    <h6 class="text-">Day 4</h6>
-                    <p class="mb-0">Dubai, UAE</p>
-                  </div>
-                </div>
-                <div class="context text-center small me-3" style="width: 25%">
-                  <p class="mb-0">Lake Louise & Banff & Moraine
-                    Lake Tour from Calgary or Banff</p>
-                </div>
-                <div class="activities d-flex justify-content-between align-items-center"
-                  style="width: 25%; position: relative">
-                  <div class="d-flex flex-column text-center">
-                    <span class="text-dark">11:00</span>
-                    <span class="text-muted">AM</span>
-                  </div>
-                  <div class="start">
-                    <div class="d-flex flex-column text-center">
-                      <span class="text-dark">Check In</span>
-                      <span class="text-muted">30th, Sept. 2023</span>
-                    </div>
-                  </div>
-                  <div class="d-flex flex-column text-center">
-                    <span class="text-dark">15:00</span>
-                    <span class="text-muted">PM</span>
-                  </div>
-                </div>
-                <div class="price-button d-flex justify-content-end" style="width: 25%">
-                  <div class="d-flex align-items-top">
-                    <h5 class="me-3 mb-0">N34,234</h5>
-                    <div class="text-center">
-                      <button class="btn btn-primary">Change</button>
-                      <p class="small mb-0">Flight Details</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card hotel-card border-0 shadow mb-4">
-            <div class="card-body">
-              <div class="d-flex align-items-center justify-content-">
-                <div class="logo-container d-flex align-items-center" style="width: 20%">
-                  <div class="logo-box bg-light me-3" style="height: 70px; width: 70px;"></div>
-                  <div class="hotel-name text-center">
-                    <h6 class="">Day 5</h6>
                     <p class="mb-0">Dubai, UAE</p>
                   </div>
                 </div>
@@ -705,6 +676,64 @@
                   Split Pay</button>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="card rounded-5 border-0 shadow mb-5">
+          <div class="card-body p-4">
+            <div class="row mb-3">
+              <div class="col-1">
+                <div class="user-circle bg-primary" style="height: 40px; width: 40px; border-radius: 50%;"></div>
+              </div>
+              <div class="col-11"><input type="text" name="" class="form-control rounded-4" id=""></div>
+            </div>
+            <h4>Comments</h4>
+            <div class="row mb-4">
+              <div class="col-md-1">
+                <img src="https://image.ibb.co/jw55Ex/def_face.jpg" style="height: 40px;"
+                  class="img img-rounded img-fluid" />
+              </div>
+              <div class="col-md-11">
+                <p>
+                  <a class="float-left"
+                    href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman
+                      Akash</strong></a>
+                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+
+                </p>
+                <div class="clearfix"></div>
+                <p>Lorem Ipsum is simply dummy text of the pr make but also the leap into electronic typesetting,
+                  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                  containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                  PageMaker including versions of Lorem Ipsum.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-1">
+                <img src="https://image.ibb.co/jw55Ex/def_face.jpg" style="height: 40px;"
+                  class="img img-rounded img-fluid" />
+              </div>
+              <div class="col-md-11">
+                <p>
+                  <a class="float-left"
+                    href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman
+                      Akash</strong></a>
+                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                  <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+
+                </p>
+                <div class="clearfix"></div>
+                <p>Lorem Ipsum is simply dummy text of the pr make but also the leap into electronic typesetting,
+                  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+                  containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                  PageMaker including versions of Lorem Ipsum.</p>
+              </div>
+            </div>
+
           </div>
         </div>
 
